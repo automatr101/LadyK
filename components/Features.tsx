@@ -1,0 +1,64 @@
+"use client";
+
+import { SpotlightCard } from "@/components/SpotlightCard";
+import { Zap, Shield, TrendingUp, ChevronRight } from "lucide-react";
+import { motion } from "framer-motion";
+
+export function Features() {
+  const features = [
+    {
+      title: "AI Automation",
+      desc: "Learn how to use AI to automate the boring parts of your business, so you can focus on what actually makes money.",
+      icon: Zap,
+      color: "text-yellow-500"
+    },
+    {
+      title: "Beginner-Friendly",
+      desc: "No technical experience? No problem. We break everything down into simple steps that anyone can follow.",
+      icon: Shield,
+      color: "text-green-500"
+    },
+    {
+      title: "Monetization Strategies",
+      desc: "Copy our proven frameworks for finding and promoting high-ticket digital products that pay big commissions.",
+      icon: TrendingUp,
+      color: "text-blue-500"
+    }
+  ];
+
+  return (
+    <section id="features" className="py-24 bg-zinc-950 border-y border-zinc-900">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tighter">Everything You Need To <br/><span className="text-zinc-500">Scale From Zero.</span></h2>
+          <p className="text-zinc-500 max-w-2xl mx-auto text-lg font-light">
+            We provide the tools and the training. You just need to follow the blueprint.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {features.map((feature, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1 }}
+            >
+              <SpotlightCard className="p-10 border-zinc-800/50 hover:border-blue-500/50 transition-colors group h-full">
+                <div className="w-16 h-16 rounded-2xl bg-zinc-800 flex items-center justify-center mb-8 border border-zinc-700 transition-transform group-hover:scale-110 group-hover:bg-zinc-700">
+                  <feature.icon className={`w-8 h-8 ${feature.color}`} />
+                </div>
+                <h3 className="text-2xl font-bold mb-4 tracking-tight">{feature.title}</h3>
+                <p className="text-zinc-500 leading-relaxed text-lg font-light mb-8">{feature.desc}</p>
+                <div className="mt-auto flex items-center text-sm font-black uppercase tracking-widest text-zinc-400 group-hover:text-blue-500 transition-colors">
+                  View Module <ChevronRight className="ml-1 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </div>
+              </SpotlightCard>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
