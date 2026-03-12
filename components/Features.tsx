@@ -9,22 +9,22 @@ import { TextAnimate } from "@/components/ui/text-animate";
 export function Features() {
   const features = [
     {
-      title: "Digital Marketing",
-      desc: "Learn the core strategies for promoting in-demand products and building a sustainable online income stream.",
+      title: "Instant Bank Payouts",
+      desc: "Withdraw your hard-earned commissions directly to your local bank account instantly. No long waiting periods or complex processing.",
       icon: Zap,
       color: "text-yellow-500",
       beamColor: "#eab308"
     },
     {
-      title: "Beginner-Friendly",
-      desc: "No technical experience? No problem. We break everything down into simple steps that anyone can follow.",
+      title: "Step-by-Step Blueprint",
+      desc: "The Ultimate Affiliate Marketing Program (UAMP) breaks everything down into simple, actionable steps that anyone can follow.",
       icon: Shield,
       color: "text-green-500",
       beamColor: "#22c55e"
     },
     {
-      title: "Monetization Strategies",
-      desc: "Copy our proven frameworks for finding and promoting high-ticket digital products that pay big commissions.",
+      title: "High-Ticket Marketplace",
+      desc: "Get exclusive access to a marketplace of high-converting digital products that pay you massive commissions for every sale.",
       icon: TrendingUp,
       color: "text-blue-500",
       beamColor: "#3b82f6"

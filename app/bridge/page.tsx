@@ -37,10 +37,10 @@ export default function BridgePage() {
             <h2 className="text-3xl font-bold">Why This Blueprint?</h2>
             <ul className="space-y-4">
               {[
-                "No need to create your own product",
-                "Start with zero followers or experience",
-                "Proven high-ticket digital offers",
-                "Step-by-step monetization framework"
+                "Instant bank payouts (no waiting weeks)",
+                "The Ultimate Affiliate Marketing Program (UAMP)",
+                "Access to high-demand digital products",
+                "Proven step-by-step monetization framework"
               ].map((benefit, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
