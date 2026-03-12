@@ -3,6 +3,7 @@
 import { Marquee } from "@/components/ui/marquee";
 import { Star } from "lucide-react";
 import { motion } from "framer-motion";
+import { TextAnimate } from "@/components/ui/text-animate";
 
 export function Testimonials() {
   const testimonials = [
@@ -63,7 +64,15 @@ export function Testimonials() {
     <section id="testimonials" className="py-24 relative overflow-hidden bg-black">
       <div className="container mx-auto px-6 mb-16">
         <h2 className="text-4xl md:text-6xl font-black text-center tracking-tighter">
-          Real Results From <br /><span className="text-zinc-500">Real Beginners.</span>
+          <TextAnimate animation="blurInUp" by="word" once>
+            Real Results From
+          </TextAnimate>
+          <br />
+          <span className="text-zinc-500">
+            <TextAnimate animation="fadeIn" by="character" once>
+              Real Beginners.
+            </TextAnimate>
+          </span>
         </h2>
       </div>
 
