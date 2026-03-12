@@ -9,8 +9,8 @@ import { TextAnimate } from "@/components/ui/text-animate";
 export function Features() {
   const features = [
     {
-      title: "AI Automation",
-      desc: "Learn how to use AI to automate the boring parts of your business, so you can focus on what actually makes money.",
+      title: "Digital Marketing",
+      desc: "Learn the core strategies for promoting in-demand products and building a sustainable online income stream.",
       icon: Zap,
       color: "text-yellow-500",
       beamColor: "#eab308"

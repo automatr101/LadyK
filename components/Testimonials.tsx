@@ -8,44 +8,57 @@ import { TextAnimate } from "@/components/ui/text-animate";
 export function Testimonials() {
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "Digital Marketer",
-      text: "Made my first $500 online using AI automation within 3 weeks of starting. This course is a cheat code."
+      name: "Kwaku Mensah",
+      role: "Sales Associate",
+      rating: 5,
+      text: "I made my first $100 in just two weeks. This blueprint is exactly what I needed to start as a beginner."
     },
     {
-      name: "Michael Chen",
-      role: "Freelancer",
-      text: "The workflow automation section alone saved me 20+ hours every single week. My productivity is insane now."
+      name: "Abena Boateng",
+      role: "Student",
+      rating: 4,
+      text: "The steps are very clear. I finally understand how affiliate marketing works. Highly recommended for students!"
     },
     {
-      name: "David Smith",
-      role: "Content Creator",
-      text: "The monetization frameworks are worth 10x the price. I finally have a predictable income stream."
+      name: "Kofi Asare",
+      role: "Banker",
+      rating: 5,
+      text: "Even with my busy schedule, I was able to set this up. The automated system is a game changer for me."
     },
     {
-      name: "Emily Davis",
-      role: "E-com Owner",
-      text: "I was skeptical at first, but the results speak for themselves. The best investment I've made this year."
+      name: "Ama Serwaa",
+      role: "Entrepreneur",
+      rating: 4,
+      text: "I've tried many things online, but this is the most practical. Clear results if you put in the work."
     },
     {
-      name: "James Wilson",
-      role: "Agency Owner",
-      text: "Scaled my agency from 0 to $10k/mo using the outbound strategies taught in this blueprint."
+      name: "Yaw Osei",
+      role: "Teacher",
+      rating: 5,
+      text: "Finally, a way to earn extra income outside my salary. The training is very detailed and easy to follow."
     },
     {
-      name: "Jessica Lee",
-      role: "Social Media Manager",
-      text: "Finally a course that actually shows the 'how' and not just the 'what'. Highly recommended!"
+      name: "Akosua Addo",
+      role: "Virtual Assistant",
+      rating: 4,
+      text: "Great insights on how to promote products correctly. My conversion rates have improved significantly."
     }
   ];
 
   const firstRow = testimonials.slice(0, testimonials.length / 2);
   const secondRow = testimonials.slice(testimonials.length / 2);
 
-  const TestimonialCard = ({ name, role, text }: { name: string, role: string, text: string }) => (
+  const TestimonialCard = ({ name, role, text, rating }: { name: string, role: string, text: string, rating: number }) => (
     <div className="relative w-80 cursor-pointer overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-950 p-8 hover:bg-zinc-900/50 transition-colors mx-4">
       <div className="flex text-yellow-500 mb-6 gap-0.5">
-        {[1, 2, 3, 4, 5].map(s => <Star key={s} size={14} fill="currentColor" />)}
+        {[1, 2, 3, 4, 5].map(s => (
+          <Star 
+            key={s} 
+            size={14} 
+            fill={s <= rating ? "currentColor" : "none"} 
+            className={s <= rating ? "" : "text-zinc-700"}
+          />
+        ))}
       </div>
       <p className="text-zinc-300 font-light italic mb-8 leading-relaxed">"{text}"</p>
       <div className="flex items-center gap-4">

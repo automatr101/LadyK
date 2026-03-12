@@ -31,9 +31,9 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1] mb-8"
+            className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1] mb-8"
           >
-            <AnimatedGradientText className="block mb-6 text-3xl md:text-5xl lg:text-6xl">
+            <AnimatedGradientText className="block mb-6 text-2xl md:text-5xl lg:text-6xl">
               The Exact Beginner Blueprint To
             </AnimatedGradientText>
             
@@ -41,8 +41,8 @@ export function Hero() {
               Earning Your First
             </TextAnimate>
             <br /> 
-            <span className="text-blue-500 inline-block mt-4">
-              <TextAnimate animation="slideUp" by="character">
+            <span className="text-blue-500 inline-block mt-4 whitespace-nowrap">
+              <TextAnimate animation="slideUp" by="word">
                 Digital Commission
               </TextAnimate>
             </span>
@@ -52,9 +52,9 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-2xl text-zinc-500 mb-10 max-w-3xl mx-auto leading-relaxed font-medium italic"
+            className="text-lg md:text-2xl text-zinc-500 mb-10 max-w-3xl mx-auto leading-relaxed font-medium"
           >
-            "If you’re starting from zero, this step-by-step breakdown shows how beginners begin promoting digital products without creating their own or having experience."
+            If you’re starting from zero, this step-by-step breakdown shows how beginners are promoting digital products without creating their own or having prior experience.
           </motion.p>
           
           <motion.div 
@@ -63,9 +63,9 @@ export function Hero() {
             transition={{ duration: 1, delay: 0.4 }}
             className="flex flex-wrap items-center justify-center gap-8 opacity-40 hover:opacity-100 transition-opacity"
           >
-            <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[2px]"><Lock size={12} className="text-blue-500" /> Secure Encryption</div>
-            <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[2px]"><Award size={12} className="text-blue-500" /> Verified Blueprint</div>
-            <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[2px]"><GlobeIcon size={12} className="text-blue-500" /> Global Access</div>
+            <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[2px]"><Lock size={12} className="text-blue-500" /> Secure System</div>
+            <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[2px]"><Award size={12} className="text-blue-500" /> Proven Method</div>
+            <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[2px]"><GlobeIcon size={12} className="text-blue-500" /> Remote Business</div>
           </motion.div>
         </div>
 

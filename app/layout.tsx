@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AI Automation Academy | Learn to Build Passive Income with AI",
-  description: "Join 1,200+ students learning how to leverage AI tools to automate businesses and generate passive income online. Join the movement today.",
+  title: "Digital Commission Blueprint | Start Your Online Business",
+  description: "Learn the exact step-by-step method to start promoting digital products and earning commissions online. No experience required.",
 };
 
 export default function RootLayout({
