@@ -4,6 +4,7 @@ import { AnimatedGradientText } from "@/components/AnimatedGradientText";
 import { LeadForm } from "@/components/LeadForm";
 import { Users, Star, Lock, Award, Globe as GlobeIcon } from "lucide-react";
 import { motion } from "framer-motion";
+import { TextAnimate } from "@/components/ui/text-animate";
 import { Globe } from "@/components/ui/globe";
 
 export function Hero() {
@@ -27,9 +28,19 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1] mb-8"
             >
-              <AnimatedGradientText className="block mb-2 text-3xl md:text-5xl lg:text-6xl">The Exact Beginner Blueprint To</AnimatedGradientText>
-              Earning Your First <br /> 
-              <span className="text-blue-500">Digital Commission</span>
+              <AnimatedGradientText className="block mb-4 text-3xl md:text-5xl lg:text-6xl">
+                The Exact Beginner Blueprint To
+              </AnimatedGradientText>
+              
+              <TextAnimate animation="blurInUp" by="word" className="inline-block">
+                Earning Your First
+              </TextAnimate>
+              <br /> 
+              <span className="text-blue-500 inline-block mt-2">
+                <TextAnimate animation="slideUp" by="character">
+                  Digital Commission
+                </TextAnimate>
+              </span>
             </motion.h1>
             
             <motion.p 

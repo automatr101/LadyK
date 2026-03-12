@@ -4,6 +4,7 @@ import { SpotlightCard } from "@/components/SpotlightCard";
 import { Zap, Shield, TrendingUp, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { BorderBeam } from "@/components/ui/border-beam";
+import { TextAnimate } from "@/components/ui/text-animate";
 
 export function Features() {
   const features = [
@@ -34,7 +35,17 @@ export function Features() {
     <section id="features" className="py-24 bg-zinc-950 border-y border-zinc-900">
       <div className="container mx-auto px-6">
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tighter">Everything You Need To <br/><span className="text-zinc-500">Scale From Zero.</span></h2>
+          <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tighter">
+            <TextAnimate animation="blurInUp" by="word">
+              Everything You Need To
+            </TextAnimate>
+            <br/>
+            <span className="text-zinc-500">
+              <TextAnimate animation="fadeIn" by="character">
+                Scale From Zero.
+              </TextAnimate>
+            </span>
+          </h2>
           <p className="text-zinc-500 max-w-2xl mx-auto text-lg font-light">
             We provide the tools and the training. You just need to follow the blueprint.
           </p>
