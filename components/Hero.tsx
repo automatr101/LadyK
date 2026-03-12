@@ -2,8 +2,9 @@
 
 import { AnimatedGradientText } from "@/components/AnimatedGradientText";
 import { LeadForm } from "@/components/LeadForm";
-import { Users, Star, Lock, Award, Globe } from "lucide-react";
+import { Users, Star, Lock, Award, Globe as GlobeIcon } from "lucide-react";
 import { motion } from "framer-motion";
+import { Globe } from "@/components/ui/globe";
 
 export function Hero() {
   return (
@@ -48,7 +49,7 @@ export function Hero() {
             >
               <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[2px]"><Lock size={12} className="text-blue-500" /> 256-Bit SSL Secure</div>
               <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[2px]"><Award size={12} className="text-blue-500" /> Beginner Friendly</div>
-              <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[2px]"><Globe size={12} className="text-blue-500" /> Unlimited Access</div>
+              <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[2px]"><GlobeIcon size={12} className="text-blue-500" /> Unlimited Access</div>
             </motion.div>
           </div>
 
@@ -58,6 +59,11 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex-1 w-full max-w-lg lg:max-w-none flex justify-center lg:justify-end relative"
           >
+            {/* Interactive Globe Decorative Element */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] -z-20 opacity-40 pointer-events-none">
+              <Globe />
+            </div>
+            
             <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-[2.5rem] blur-xl opacity-20 -z-10 animate-pulse"></div>
             <LeadForm />
           </motion.div>

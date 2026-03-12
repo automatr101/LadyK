@@ -3,6 +3,7 @@
 import { SpotlightCard } from "@/components/SpotlightCard";
 import { Zap, Shield, TrendingUp, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { BorderBeam } from "@/components/ui/border-beam";
 
 export function Features() {
   const features = [
@@ -10,19 +11,22 @@ export function Features() {
       title: "AI Automation",
       desc: "Learn how to use AI to automate the boring parts of your business, so you can focus on what actually makes money.",
       icon: Zap,
-      color: "text-yellow-500"
+      color: "text-yellow-500",
+      beamColor: "#eab308"
     },
     {
       title: "Beginner-Friendly",
       desc: "No technical experience? No problem. We break everything down into simple steps that anyone can follow.",
       icon: Shield,
-      color: "text-green-500"
+      color: "text-green-500",
+      beamColor: "#22c55e"
     },
     {
       title: "Monetization Strategies",
       desc: "Copy our proven frameworks for finding and promoting high-ticket digital products that pay big commissions.",
       icon: TrendingUp,
-      color: "text-blue-500"
+      color: "text-blue-500",
+      beamColor: "#3b82f6"
     }
   ];
 
@@ -44,6 +48,7 @@ export function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
+              className="relative rounded-3xl overflow-hidden h-full"
             >
               <SpotlightCard className="p-10 border-zinc-800/50 hover:border-blue-500/50 transition-colors group h-full">
                 <div className="w-16 h-16 rounded-2xl bg-zinc-800 flex items-center justify-center mb-8 border border-zinc-700 transition-transform group-hover:scale-110 group-hover:bg-zinc-700">
@@ -55,6 +60,7 @@ export function Features() {
                   View Module <ChevronRight className="ml-1 w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </div>
               </SpotlightCard>
+              <BorderBeam size={200} duration={12} delay={idx * 2} colorFrom={feature.beamColor} colorTo="#18181b" />
             </motion.div>
           ))}
         </div>
@@ -62,3 +68,4 @@ export function Features() {
     </section>
   );
 }
+

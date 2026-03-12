@@ -5,11 +5,10 @@ import { useRouter } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-import { supabase } from "@/lib/supabaseClient";
-import { Button } from "@/components/ui/button";
+import { ShinyButton } from "@/components/ui/shiny-button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { NeonGradientCard } from "@/components/ui/neon-gradient-card";
 import { Loader2 } from "lucide-react";
 
 const formSchema = z.object({
@@ -37,25 +36,21 @@ export function LeadForm() {
     setError(null);
 
     try {
-      const { error: supabaseError } = await supabase
-        .from("leads")
-        .insert([
-          {
-            name: values.name,
-            email: values.email,
-            phone: values.phone,
-            source: "Pinterest",
-          },
-        ]);
+      const response = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...values,
+          source: "Pinterest",
+        }),
+      });
 
-      if (supabaseError) throw supabaseError;
+      if (!response.ok) throw new Error("Failed to submit lead");
 
       router.push("/bridge");
     } catch (e: any) {
       console.error(e);
-      // Even if database fails, we might want to redirect the user to not lose the conversion
-      // but for now let's show an error if it's critical. 
-      // Actually, for a funnel, it's often better to redirect anyway and log the error.
+      // Still redirect for better UX in a funnel, even if something fails
       router.push("/bridge");
     } finally {
       setLoading(false);
@@ -63,59 +58,73 @@ export function LeadForm() {
   }
 
   return (
-    <Card className="w-full max-w-md border-zinc-800 bg-zinc-900/50 backdrop-blur-xl">
-      <CardHeader>
-        <CardTitle className="text-2xl font-bold text-white">Get Free Access</CardTitle>
-        <CardDescription className="text-zinc-400">
-          Enter your details to receive the AI starter guide.
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-          <div className="space-y-2">
-            <Label htmlFor="name" className="text-zinc-300">Full Name</Label>
-            <Input
-              id="name"
-              placeholder="John Doe"
-              {...form.register("name")}
-              className="bg-zinc-800/50 border-zinc-700 text-white placeholder:text-zinc-500 focus:ring-blue-500"
-            />
-            {form.formState.errors.name && (
-              <p className="text-sm text-red-400">{form.formState.errors.name.message}</p>
-            )}
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="email" className="text-zinc-300">Email Address</Label>
-            <Input
-              id="email"
-              type="email"
-              placeholder="john@example.com"
-              {...form.register("email")}
-              className="bg-zinc-800/50 border-zinc-700 text-white placeholder:text-zinc-500 focus:ring-blue-500"
-            />
-            {form.formState.errors.email && (
-              <p className="text-sm text-red-400">{form.formState.errors.email.message}</p>
-            )}
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="phone" className="text-zinc-300">Phone Number (Optional)</Label>
-            <Input
-              id="phone"
-              type="tel"
-              placeholder="+1 (555) 000-0000"
-              {...form.register("phone")}
-              className="bg-zinc-800/50 border-zinc-700 text-white placeholder:text-zinc-500 focus:ring-blue-500"
-            />
-          </div>
-          <Button 
-            type="submit" 
-            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white h-12 font-semibold text-lg"
-            disabled={loading}
-          >
-            {loading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : "Get Free Access"}
-          </Button>
-        </form>
-      </CardContent>
-    </Card>
+    <NeonGradientCard 
+      className="w-full max-w-md items-center justify-center text-center"
+      neonColors={{ firstColor: "#3b82f6", secondColor: "#6366f1" }}
+      borderRadius={32}
+      borderSize={2}
+    >
+      <div className="text-left w-full h-full bg-zinc-950/50 backdrop-blur-xl rounded-[30px] p-2">
+        <div className="p-6">
+          <h3 className="text-2xl font-black text-white mb-2">Get Free Access</h3>
+          <p className="text-zinc-400 text-sm mb-8 font-light italic">
+            Enter your details to receive the AI starter guide.
+          </p>
+          
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <div className="space-y-2">
+              <Label htmlFor="name" className="text-zinc-400 text-xs font-bold uppercase tracking-widest">Full Name</Label>
+              <Input
+                id="name"
+                placeholder="John Doe"
+                {...form.register("name")}
+                className="bg-zinc-900 border-zinc-800 h-12 text-white placeholder:text-zinc-600 focus:ring-blue-500 rounded-xl"
+              />
+              {form.formState.errors.name && (
+                <p className="text-[10px] uppercase font-bold text-red-500 tracking-tighter">{form.formState.errors.name.message}</p>
+              )}
+            </div>
+            
+            <div className="space-y-2">
+              <Label htmlFor="email" className="text-zinc-400 text-xs font-bold uppercase tracking-widest">Email Address</Label>
+              <Input
+                id="email"
+                type="email"
+                placeholder="john@example.com"
+                {...form.register("email")}
+                className="bg-zinc-900 border-zinc-800 h-12 text-white placeholder:text-zinc-600 focus:ring-blue-500 rounded-xl"
+              />
+              {form.formState.errors.email && (
+                <p className="text-[10px] uppercase font-bold text-red-500 tracking-tighter">{form.formState.errors.email.message}</p>
+              )}
+            </div>
+            
+            <div className="space-y-2">
+              <Label htmlFor="phone" className="text-zinc-400 text-xs font-bold uppercase tracking-widest">Phone (Optional)</Label>
+              <Input
+                id="phone"
+                type="tel"
+                placeholder="+1 (555) 000-0000"
+                {...form.register("phone")}
+                className="bg-zinc-900 border-zinc-800 h-12 text-white placeholder:text-zinc-600 focus:ring-blue-500 rounded-xl"
+              />
+            </div>
+            
+            <ShinyButton 
+              type="submit" 
+              className="w-full h-14 text-lg font-black tracking-tighter bg-blue-600 border-none shadow-[0_0_20px_rgba(59,130,246,0.5)]"
+              disabled={loading}
+            >
+              {loading ? <Loader2 className="mr-2 h-5 w-5 animate-spin" /> : "SEND ME THE GUIDE NOW"}
+            </ShinyButton>
+            
+            <p className="text-[9px] text-zinc-600 text-center uppercase tracking-widest font-bold">
+              We respect your privacy. No spam ever.
+            </p>
+          </form>
+        </div>
+      </div>
+    </NeonGradientCard>
   );
 }
+
