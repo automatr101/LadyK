@@ -123,7 +123,7 @@ export function LeadForm() {
                 <Input
                   id="phone"
                   type="tel"
-                  placeholder="+1 (555) 000-0000"
+                  placeholder="+233 (0) 55 000 0000"
                   {...form.register("phone")}
                   className="bg-transparent border-t-0 border-x-0 border-b-2 border-zinc-800 rounded-none px-0 h-10 text-white placeholder:text-zinc-700 focus-visible:ring-0 focus-visible:border-blue-500 transition-all text-base"
                 />
@@ -134,7 +134,7 @@ export function LeadForm() {
                   Target Income
                 </Label>
                 <div className="bg-transparent border-b-2 border-zinc-800 h-10 text-zinc-600 flex items-center text-base italic pointer-events-none">
-                  $1k - $10k per month
+                  GHS 10k - GHS 50k per month
                 </div>
               </div>
             </div>
