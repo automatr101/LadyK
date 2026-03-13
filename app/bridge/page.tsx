@@ -19,17 +19,6 @@ export default function BridgePage() {
           </p>
         </div>
 
-        {/* Video Placeholder Section */}
-        <div className="relative aspect-video w-full rounded-3xl overflow-hidden bg-zinc-900 border border-zinc-800 mb-12 shadow-2xl shadow-blue-500/10 group cursor-pointer">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-20 h-20 rounded-full bg-blue-600 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
-              <Play className="w-8 h-8 text-white fill-white ml-1" />
-            </div>
-          </div>
-          <div className="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
-            <p className="font-bold text-lg">Watch this short message from the instructor</p>
-          </div>
-        </div>
 
         {/* Key Benefits */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
