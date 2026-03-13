@@ -136,7 +136,7 @@ export function LeadForm() {
                 className="w-full h-14 bg-blue-600 text-white font-black tracking-tighter text-lg rounded-xl hover:bg-blue-700 transition-all group border-none shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)]"
                 disabled={loading}
               >
-                {loading ? <Loader2 className="h-5 w-5 animate-spin" /> : "SEND NOW"}
+                {loading ? <Loader2 className="h-5 w-5 animate-spin" /> : "GET ACCESS"}
               </ShinyButton>
             </div>
           </form>
