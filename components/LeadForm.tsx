@@ -134,7 +134,7 @@ export function LeadForm() {
                   Target Income
                 </Label>
                 <div className="bg-transparent border-b-2 border-zinc-800 h-10 text-zinc-600 flex items-center text-base italic pointer-events-none">
-                  GHS 10k - GHS 50k per month
+                  GHS 5k - GHS 50k per month
                 </div>
               </div>
             </div>
@@ -142,7 +142,7 @@ export function LeadForm() {
             <div className="pt-6 flex justify-end">
               <ShinyButton 
                 type="submit" 
-                className="w-full md:w-48 h-14 bg-white text-zinc-950 font-black tracking-tighter text-base rounded-full hover:bg-zinc-200 transition-all group"
+                className="w-full md:w-48 h-14 bg-blue-600 text-white font-black tracking-tighter text-base rounded-full hover:bg-blue-700 transition-all group border-none shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)]"
                 disabled={loading}
               >
                 {loading ? <Loader2 className="h-5 w-5 animate-spin" /> : "SEND NOW"}
