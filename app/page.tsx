@@ -33,7 +33,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-20 border-t border-zinc-900 bg-black backdrop-blur-xl">
         <div className="container mx-auto px-6 text-center">
-          <p className="text-zinc-600 text-[10px] font-black uppercase tracking-[4px] mb-8">© 2024 BEGINNER BLUEPRINT. ALL RIGHTS RESERVED.</p>
+          <p className="text-zinc-600 text-[10px] font-black uppercase tracking-[4px] mb-8">© 2026 BEGINNER BLUEPRINT. ALL RIGHTS RESERVED.</p>
           <div className="flex justify-center items-center gap-8 grayscale opacity-30">
             <div className="flex items-center gap-1.5 text-xs font-bold uppercase"><CheckCircle size={14} className="text-green-500" /> Secure Checkout</div>
             <div className="flex items-center gap-1.5 text-xs font-bold uppercase"><CheckCircle size={14} className="text-green-500" /> Verified Partners</div>
