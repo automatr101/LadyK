@@ -84,24 +84,24 @@ export function LeadForm() {
           </p>
 
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 text-left">
-              <div className="space-y-1 group">
-                <Label htmlFor="name" className="text-zinc-500 text-[10px] uppercase font-black tracking-[0.2em]">
+            <div className="flex flex-col gap-8 text-left">
+              <div className="space-y-2 group">
+                <Label htmlFor="name" className="text-zinc-500 text-xs uppercase font-black tracking-[0.2em]">
                   Your name <span className="text-red-500">*</span>
                 </Label>
                 <Input
                   id="name"
                   placeholder="Enter name"
                   {...form.register("name")}
-                  className="bg-transparent border-t-0 border-x-0 border-b-2 border-zinc-800 rounded-none px-0 h-10 text-white placeholder:text-zinc-700 focus-visible:ring-0 focus-visible:border-blue-500 transition-all text-base"
+                  className="bg-zinc-900/50 border-2 border-zinc-800 rounded-xl px-4 h-14 text-white placeholder:text-zinc-600 focus-visible:ring-0 focus-visible:border-blue-500 hover:border-zinc-700 transition-all text-lg"
                 />
                 {form.formState.errors.name && (
                   <p className="text-[10px] text-red-500 uppercase font-black">{form.formState.errors.name.message}</p>
                 )}
               </div>
 
-              <div className="space-y-1 group">
-                <Label htmlFor="email" className="text-zinc-500 text-[10px] uppercase font-black tracking-[0.2em]">
+              <div className="space-y-2 group">
+                <Label htmlFor="email" className="text-zinc-500 text-xs uppercase font-black tracking-[0.2em]">
                   Your email <span className="text-red-500">*</span>
                 </Label>
                 <Input
@@ -109,15 +109,15 @@ export function LeadForm() {
                   type="email"
                   placeholder="Enter email"
                   {...form.register("email")}
-                  className="bg-transparent border-t-0 border-x-0 border-b-2 border-zinc-800 rounded-none px-0 h-10 text-white placeholder:text-zinc-700 focus-visible:ring-0 focus-visible:border-blue-500 transition-all text-base"
+                  className="bg-zinc-900/50 border-2 border-zinc-800 rounded-xl px-4 h-14 text-white placeholder:text-zinc-600 focus-visible:ring-0 focus-visible:border-blue-500 hover:border-zinc-700 transition-all text-lg"
                 />
                 {form.formState.errors.email && (
                   <p className="text-[10px] text-red-500 uppercase font-black">{form.formState.errors.email.message}</p>
                 )}
               </div>
 
-              <div className="space-y-1 group">
-                <Label htmlFor="phone" className="text-zinc-500 text-[10px] uppercase font-black tracking-[0.2em]">
+              <div className="space-y-2 group">
+                <Label htmlFor="phone" className="text-zinc-500 text-xs uppercase font-black tracking-[0.2em]">
                   Phone (Optional)
                 </Label>
                 <Input
@@ -125,24 +125,15 @@ export function LeadForm() {
                   type="tel"
                   placeholder="+233 (0) 55 000 0000"
                   {...form.register("phone")}
-                  className="bg-transparent border-t-0 border-x-0 border-b-2 border-zinc-800 rounded-none px-0 h-10 text-white placeholder:text-zinc-700 focus-visible:ring-0 focus-visible:border-blue-500 transition-all text-base"
+                  className="bg-zinc-900/50 border-2 border-zinc-800 rounded-xl px-4 h-14 text-white placeholder:text-zinc-600 focus-visible:ring-0 focus-visible:border-blue-500 hover:border-zinc-700 transition-all text-lg"
                 />
-              </div>
-
-              <div className="space-y-1 group">
-                <Label className="text-zinc-500 text-[10px] uppercase font-black tracking-[0.2em]">
-                  Target Income
-                </Label>
-                <div className="bg-transparent border-b-2 border-zinc-800 h-10 text-zinc-600 flex items-center text-base italic pointer-events-none">
-                  GHS 5k - GHS 50k per month
-                </div>
               </div>
             </div>
 
-            <div className="pt-6 flex justify-end">
+            <div className="pt-6">
               <ShinyButton 
                 type="submit" 
-                className="w-full md:w-48 h-14 bg-blue-600 text-white font-black tracking-tighter text-base rounded-full hover:bg-blue-700 transition-all group border-none shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)]"
+                className="w-full h-14 bg-blue-600 text-white font-black tracking-tighter text-lg rounded-xl hover:bg-blue-700 transition-all group border-none shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)]"
                 disabled={loading}
               >
                 {loading ? <Loader2 className="h-5 w-5 animate-spin" /> : "SEND NOW"}
