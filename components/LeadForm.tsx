@@ -67,7 +67,7 @@ export function LeadForm() {
         </div>
         <div className="bg-zinc-950 border border-zinc-800 rounded-md px-12 py-0.5 text-[10px] text-zinc-500 font-bold uppercase tracking-widest flex items-center gap-2">
           <Monitor size={10} className="text-zinc-600" />
-          lady-k.digital/app
+          earnblueprint.vercel.app
         </div>
         <div className="w-10" />
       </div>
@@ -162,9 +162,6 @@ export function LeadForm() {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex flex-col items-center">
               <div className="p-3 bg-blue-500 rounded-full animate-bounce shadow-[0_0_30px_rgba(59,130,246,0.6)]">
                  <MapPin className="text-white fill-white" size={24} />
-              </div>
-              <div className="mt-4 px-3 py-1 bg-zinc-900 border border-zinc-800 rounded-lg text-xs font-black uppercase tracking-widest text-white shadow-2xl backdrop-blur-md">
-                 New Lead From Pinterest
               </div>
             </div>
           </div>
