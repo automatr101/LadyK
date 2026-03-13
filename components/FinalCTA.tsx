@@ -10,7 +10,10 @@ export function FinalCTA() {
   const AFFILIATE_LINK = "https://digitstem.com/promo/?reference=Abdulai%20KhadijaTuurosungJWBD";
 
   const handleRedirect = () => {
-    window.location.href = AFFILIATE_LINK;
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   };
 
   return (
