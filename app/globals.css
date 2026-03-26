@@ -14,11 +14,9 @@
     
     --background: var(--dark);
     --foreground: var(--white);
-    
-    --font-playfair: var(--font-playfair);
-    --font-dm-sans: var(--font-dm-sans);
   }
 }
+
 
 @theme inline {
   --color-gold: var(--gold);

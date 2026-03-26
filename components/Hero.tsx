@@ -51,7 +51,7 @@ export function Hero() {
             Get The UMM Course Now →
           </a>
           <p className="mt-6 text-sm text-zinc-500 font-light">
-            One-time payment  &nbsp;·&nbsp; <span className="text-gold">Instant access</span> &nbsp;·&nbsp; Start today
+            One-time payment  {" · "} <span className="text-gold">Instant access</span> {" · "} Start today
           </p>
         </motion.div>
       </div>

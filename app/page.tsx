@@ -28,7 +28,7 @@ export default function Home() {
       <footer className="py-24 border-t border-[#1a1a1a] bg-black">
         <div className="container mx-auto px-6 text-center">
           <p className="text-zinc-500 text-sm font-medium mb-6">
-            ©️ 2026 Khadija — Digital Skills & Side Hustles &nbsp;·&nbsp; 
+            © 2026 Khadija — Digital Skills {" & "} Side Hustles {" · "} 
             <a href="https://digitstem.com/promo/?reference=Abdulai%20KhadijaTuurosungJWBD" target="_blank" className="text-gold hover:text-gold-light transition-colors">Get The UMM Course</a>
           </p>
           <p className="text-zinc-600 text-[10px] font-semibold uppercase tracking-[2px] max-w-xl mx-auto leading-relaxed opacity-70">
