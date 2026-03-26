@@ -1,58 +1,69 @@
 "use client";
 
-import { CountdownTimer } from "@/components/CountdownTimer";
-import { Clock } from "lucide-react";
 import { motion } from "framer-motion";
-import { NeonGradientCard } from "@/components/ui/neon-gradient-card";
-import { ShinyButton } from "@/components/ui/shiny-button";
+
+const includes = [
+  "Complete UMM Video Course",
+  "Step-by-step beginner system",
+  "Your own affiliate link to earn commissions",
+  "Works from your phone anywhere in the world",
+  "Direct bank payout to 120+ countries",
+  "Instant access after purchase"
+];
 
 export function FinalCTA() {
-  const AFFILIATE_LINK = "https://digitstem.com/promo/?reference=Abdulai%20KhadijaTuurosungJWBD";
-
-  const handleRedirect = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  };
-
   return (
-    <section className="py-24 border-t border-zinc-900 bg-zinc-950">
-      <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto">
-          <NeonGradientCard 
-            neonColors={{ firstColor: "#3b82f6", secondColor: "#6366f1" }}
-            borderRadius={48}
-            borderSize={2}
-          >
-            <div className="bg-zinc-950/80 backdrop-blur-xl rounded-[46px] p-8 md:p-16 text-center relative overflow-hidden h-full flex flex-col items-center justify-center">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 blur-[80px] rounded-full"></div>
-              
-              <div className="inline-flex items-center gap-2 mb-8 bg-blue-600/10 px-4 py-2 rounded-full border border-blue-600/20 text-blue-500 font-black text-xs uppercase tracking-[3px]">
-                <Clock size={16} /> Enrollment Closing Soon
+    <div className="bg-[#0D0D0D]">
+      {/* Price Section */}
+      <section className="py-24 px-6 container mx-auto max-w-2xl text-center">
+        <p className="text-[11px] text-gold font-semibold tracking-[0.3em] uppercase mb-4">Investment</p>
+        <div className="bg-dark2 border border-[#333] p-12 md:p-16 relative overflow-hidden group hover:border-[#444] transition-colors rounded-sm shadow-2xl">
+          <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-gold to-gold-light opacity-80" />
+          
+          <p className="text-xs text-zinc-500 font-bold uppercase tracking-[0.2em] mb-4">One Time Payment</p>
+          <div className="font-serif text-6xl md:text-8xl text-gold font-black mb-6 flex items-center justify-center gap-1 group-hover:scale-105 transition-transform duration-500">
+             <sup className="text-3xl mt-4 font-black">GHS</sup>29
+          </div>
+          <p className="text-zinc-500 text-sm md:text-md mb-12 font-light max-w-md mx-auto leading-relaxed">
+            That's less than a meal out. One payment. Lifetime access. Start earning this week.
+          </p>
+          
+          <div className="space-y-4 mb-12 text-left max-w-sm mx-auto">
+            {includes.map((item, i) => (
+              <div key={i} className="flex items-center gap-3 text-zinc-400 text-sm font-light">
+                <span className="text-gold font-bold">✓</span>
+                {item}
               </div>
-              
-              <h2 className="text-4xl md:text-5xl font-black mb-10 tracking-tighter text-white">
-                Ready To Earn Your First Digital Commission?
-              </h2>
-              
-              <CountdownTimer />
-              
-              <p className="mt-10 text-zinc-400 text-lg md:text-xl font-light max-w-2xl mx-auto mb-12">
-                Get the full blueprint and start promoting digital products today.
-              </p>
-              
-              <ShinyButton 
-                onClick={handleRedirect}
-                className="w-full md:w-auto px-12 py-6 bg-white text-black font-black text-xl rounded-2xl hover:bg-zinc-200 shadow-2xl"
-              >
-                GET ACCESS NOW
-              </ShinyButton>
-            </div>
-          </NeonGradientCard>
+            ))}
+          </div>
+          
+          <a 
+            href="https://digitstem.com/promo/?reference=Abdulai%20KhadijaTuurosungJWBD" 
+            target="_blank"
+            className="block w-full bg-linear-to-br from-gold to-gold-light text-dark font-black py-5 rounded-sm text-lg shadow-[0_8px_40px_rgba(201,168,76,0.3)] hover:transform hover:-translate-y-1 transition-all duration-300 uppercase tracking-widest"
+          >
+            Get Instant Access Now →
+          </a>
+          <p className="mt-4 text-[11px] text-zinc-600 font-medium">Secure payment · Instant access · No recurring fees</p>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Footer CTA */}
+      <section className="footer-gradient py-32 px-6 border-t border-[#1a1a1a] text-center">
+        <div className="container mx-auto max-w-3xl">
+          <h2 className="text-3xl md:text-5xl font-serif font-black mb-8 leading-tight">Your First Commission Could Be This Week</h2>
+          <p className="text-zinc-500 text-lg mb-12 font-light max-w-xl mx-auto">
+            Stop watching others earn online. The UMM course gives you everything you need to start — right now.
+          </p>
+          <a 
+            href="https://digitstem.com/promo/?reference=Abdulai%20KhadijaTuurosungJWBD" 
+            target="_blank"
+            className="inline-block bg-linear-to-br from-gold to-gold-light text-dark font-black px-12 py-5 rounded-sm text-lg shadow-[0_8px_40px_rgba(201,168,76,0.3)] hover:transform hover:-translate-y-1 transition-all duration-300 uppercase tracking-widest"
+          >
+            Yes, I Want To Start Earning →
+          </a>
+        </div>
+      </section>
+    </div>
   );
 }
-

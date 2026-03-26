@@ -1,35 +1,36 @@
 "use client";
 
-import { Lock, Award, ShieldCheck, Users } from "lucide-react";
 import { motion } from "framer-motion";
 
-export function TrustSection() {
-  const trustItems = [
-    { icon: Lock, label: "Secure Data" },
-    { icon: Award, label: "Top Rated" },
-    { icon: ShieldCheck, label: "Privacy First" },
-    { icon: Users, label: "1,200+ Students" }
-  ];
+const stats = [
+  { label: "Active Students", value: "380K+" },
+  { label: "One Time Only", value: "Under $27" },
+  { label: "Beginner Friendly", value: "100%" },
+  { label: "Instant Access", value: "Digital" },
+];
 
+export function TrustSection() {
   return (
-    <section className="py-12 bg-black border-t border-zinc-900">
-      <div className="container mx-auto px-6">
-        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-50">
-          {trustItems.map((item, i) => (
-            <motion.div 
-              key={i}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="flex items-center gap-2 group hover:opacity-100 transition-opacity cursor-default"
-            >
-              <item.icon size={20} className="text-blue-500" />
-              <span className="text-xs font-bold uppercase tracking-[2px]">{item.label}</span>
-            </motion.div>
-          ))}
-        </div>
+    <div className="bg-dark2 border-y border-[#2a2a2a] py-12 px-6">
+      <div className="container mx-auto flex flex-wrap justify-center gap-12 md:gap-24">
+        {stats.map((stat, idx) => (
+          <motion.div 
+            key={idx}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: idx * 0.1 }}
+            className="text-center"
+          >
+            <strong className="block font-serif text-3xl md:text-4xl text-gold mb-1 font-black">
+              {stat.value}
+            </strong>
+            <span className="text-[11px] text-zinc-500 uppercase tracking-[0.2em] font-medium">
+              {stat.label}
+            </span>
+          </motion.div>
+        ))}
       </div>
-    </section>
+    </div>
   );
 }

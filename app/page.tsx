@@ -5,41 +5,38 @@ import { Features } from "@/components/Features";
 import { Testimonials } from "@/components/Testimonials";
 import { TrustSection } from "@/components/TrustSection";
 import { FinalCTA } from "@/components/FinalCTA";
-import { CheckCircle } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-blue-500/30 font-sans overflow-x-hidden">
-      {/* Navigation */}
-      <nav className="container mx-auto px-6 py-6 flex justify-between items-center relative z-10">
-        <div className="flex items-center gap-2 font-bold text-xl tracking-tighter">
-          <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white text-xs">BK</div>
-          BLUEPRINT
-        </div>
-        <div className="hidden md:flex gap-8 text-sm font-medium text-zinc-400">
-          <a href="#features" className="hover:text-white transition-colors">Features</a>
-          <a href="#testimonials" className="hover:text-white transition-colors">Testimonials</a>
+    <div className="min-h-screen bg-black text-white selection:bg-gold/30 font-sans overflow-x-hidden">
+      {/* Navigation - Minimal or None as per the look.txt */}
+      <nav className="container mx-auto px-6 py-8 flex justify-between items-center relative z-20 pointer-events-none">
+        <div className="text-[10px] font-black uppercase tracking-[0.4em] text-gold/60">
+          Digitstem — Ultimate Money Machine
         </div>
       </nav>
 
       <main>
         <Hero />
+        <TrustSection />
         <Features />
         <Testimonials />
-        <TrustSection />
         <FinalCTA />
       </main>
 
       {/* Footer */}
-      <footer className="py-20 border-t border-zinc-900 bg-black backdrop-blur-xl">
+      <footer className="py-24 border-t border-[#1a1a1a] bg-black">
         <div className="container mx-auto px-6 text-center">
-          <p className="text-zinc-600 text-[10px] font-black uppercase tracking-[4px] mb-8">© 2026 BEGINNER BLUEPRINT. ALL RIGHTS RESERVED.</p>
-          <div className="flex justify-center items-center gap-8 grayscale opacity-30">
-            <div className="flex items-center gap-1.5 text-xs font-bold uppercase"><CheckCircle size={14} className="text-green-500" /> Secure Checkout</div>
-            <div className="flex items-center gap-1.5 text-xs font-bold uppercase"><CheckCircle size={14} className="text-green-500" /> Verified Partners</div>
-          </div>
+          <p className="text-zinc-500 text-sm font-medium mb-6">
+            ©️ 2026 Khadija — Digital Skills & Side Hustles &nbsp;·&nbsp; 
+            <a href="https://digitstem.com/promo/?reference=Abdulai%20KhadijaTuurosungJWBD" target="_blank" className="text-gold hover:text-gold-light transition-colors">Get The UMM Course</a>
+          </p>
+          <p className="text-zinc-600 text-[10px] font-semibold uppercase tracking-[2px] max-w-xl mx-auto leading-relaxed opacity-70">
+            This page contains affiliate links. I earn a commission when you purchase through my link at no extra cost to you.
+          </p>
         </div>
       </footer>
     </div>
   );
 }
+
