@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Ultimate Money Machine — Start Earning Online Today</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #F0D080;
+    --dark: #0D0D0D;
+    --dark2: #161616;
+    --dark3: #1F1F1F;
+    --white: #FAFAFA;
+    --muted: #999;
+  }
+
+- { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+background: var(–dark);
+color: var(–white);
+font-family: ‘DM Sans’, sans-serif;
+overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 60px 24px;
+position: relative;
+text-align: center;
+background: radial-gradient(ellipse at high 0%, #2a1f00 0%, var(–dark) 70%);
+}
+
+.hero::before {
+content: ‘’;
+position: absolute;
+inset: 0;
+background: url(“data:image/svg+xml,%3Csvg width=‘60’ height=‘60’ viewBox=‘0 0 60 60’ xmlns=‘http://www.w3.org/2000/svg’%3E%3Cg fill=‘none’ fill-rule=‘evenodd’%3E%3Cg fill=’%23C9A84C’ fill-opacity=‘0.03’%3E%3Cpath d=‘M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z’/%3E%3C/g%3E%3C/g%3E%3C/svg%3E”);
+pointer-events: none;
+}
+
+.badge {
+display: inline-block;
+background: rgba(201, 168, 76, 0.15);
+border: 1px solid rgba(201, 168, 76, 0.4);
+color: var(–gold-light);
+font-size: 11px;
+font-weight: 600;
+letter-spacing: 3px;
+text-transform: uppercase;
+padding: 8px 20px;
+border-radius: 100px;
+margin-bottom: 32px;
+animation: fadeDown 0.8s ease both;
+}
+
+.hero h1 {
+font-family: ‘Playfair Display’, serif;
+font-size: clamp(36px, 8vw, 72px);
+font-weight: 900;
+line-height: 1.1;
+max-width: 800px;
+margin-bottom: 24px;
+animation: fadeDown 0.8s ease 0.1s both;
+}
+
+.hero h1 span {
+background: linear-gradient(135deg, var(–gold), var(–gold-light));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+
+.hero p {
+font-size: clamp(16px, 2.5vw, 20px);
+color: #bbb;
+max-width: 560px;
+line-height: 1.7;
+margin-bottom: 48px;
+font-weight: 300;
+animation: fadeDown 0.8s ease 0.2s both;
+}
+
+.cta-primary {
+display: inline-block;
+background: linear-gradient(135deg, var(–gold), var(–gold-light));
+color: var(–dark);
+font-family: ‘DM Sans’, sans-serif;
+font-size: 17px;
+font-weight: 700;
+padding: 20px 48px;
+border-radius: 4px;
+text-decoration: none;
+letter-spacing: 0.5px;
+transition: all 0.3s ease;
+box-shadow: 0 8px 40px rgba(201, 168, 76, 0.35);
+animation: fadeDown 0.8s ease 0.3s both;
+position: relative;
+overflow: hidden;
+}
+
+.cta-primary::after {
+content: ‘’;
+position: absolute;
+inset: 0;
+background: rgba(255,255,255,0.15);
+opacity: 0;
+transition: opacity 0.3s;
+}
+
+.cta-primary:hover { transform: translateY(-3px); box-shadow: 0 16px 50px rgba(201, 168, 76, 0.5); }
+.cta-primary:hover::after { opacity: 1; }
+
+.trust-line {
+margin-top: 20px;
+font-size: 13px;
+color: var(–muted);
+animation: fadeDown 0.8s ease 0.4s both;
+}
+
+.trust-line span { color: var(–gold); }
+
+/* PROOF BAR */
+.proof-bar {
+background: var(–dark2);
+border-top: 1px solid #2a2a2a;
+border-bottom: 1px solid #2a2a2a;
+padding: 24px;
+display: flex;
+justify-content: center;
+gap: 48px;
+flex-wrap: wrap;
+}
+
+.proof-item {
+text-align: center;
+}
+
+.proof-item strong {
+display: block;
+font-family: ‘Playfair Display’, serif;
+font-size: 28px;
+color: var(–gold);
+}
+
+.proof-item span {
+font-size: 12px;
+color: var(–muted);
+letter-spacing: 1px;
+text-transform: uppercase;
+}
+
+/* WHAT IS */
+.section {
+padding: 80px 24px;
+max-width: 800px;
+margin: 0 auto;
+}
+
+.section-label {
+font-size: 11px;
+letter-spacing: 3px;
+text-transform: uppercase;
+color: var(–gold);
+margin-bottom: 16px;
+font-weight: 600;
+}
+
+.section h2 {
+font-family: ‘Playfair Display’, serif;
+font-size: clamp(28px, 5vw, 44px);
+line-height: 1.2;
+margin-bottom: 24px;
+}
+
+.section p {
+color: #aaa;
+line-height: 1.8;
+font-size: 17px;
+font-weight: 300;
+margin-bottom: 20px;
+}
+
+/* WHAT YOU GET */
+.features {
+background: var(–dark2);
+padding: 80px 24px;
+}
+
+.features-inner {
+max-width: 800px;
+margin: 0 auto;
+}
+
+.features-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 2px;
+margin-top: 48px;
+border: 1px solid #2a2a2a;
+}
+
+.feature-card {
+background: var(–dark3);
+padding: 36px 32px;
+border: 1px solid #252525;
+transition: background 0.3s;
+}
+
+.feature-card:hover { background: #242424; }
+
+.feature-icon {
+font-size: 28px;
+margin-bottom: 16px;
+}
+
+.feature-card h3 {
+font-family: ‘Playfair Display’, serif;
+font-size: 20px;
+margin-bottom: 10px;
+color: var(–white);
+}
+
+.feature-card p {
+font-size: 14px;
+color: #888;
+line-height: 1.7;
+}
+
+/* FOR WHO */
+.for-who {
+padding: 80px 24px;
+max-width: 800px;
+margin: 0 auto;
+}
+
+.checklist {
+margin-top: 36px;
+display: flex;
+flex-direction: column;
+gap: 16px;
+}
+
+.check-item {
+display: flex;
+align-items: flex-start;
+gap: 16px;
+padding: 20px 24px;
+background: var(–dark2);
+border: 1px solid #252525;
+border-left: 3px solid var(–gold);
+}
+
+.check-icon {
+color: var(–gold);
+font-size: 18px;
+flex-shrink: 0;
+margin-top: 2px;
+}
+
+.check-item p {
+font-size: 15px;
+color: #bbb;
+line-height: 1.6;
+}
+
+.check-item strong { color: var(–white); }
+
+/* TESTIMONIALS */
+.testimonials {
+background: var(–dark2);
+padding: 80px 24px;
+border-top: 1px solid #2a2a2a;
+}
+
+.testimonials-inner {
+max-width: 800px;
+margin: 0 auto;
+}
+
+.testimonials-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 16px;
+margin-top: 48px;
+}
+
+.testimonial-card {
+background: var(–dark3);
+border: 1px solid #2a2a2a;
+padding: 32px;
+position: relative;
+}
+
+.testimonial-card::before {
+content: ‘”’;
+font-family: ‘Playfair Display’, serif;
+font-size: 80px;
+color: var(–gold);
+opacity: 0.2;
+position: absolute;
+top: 8px;
+left: 20px;
+line-height: 1;
+}
+
+.testimonial-card p {
+font-size: 15px;
+color: #bbb;
+line-height: 1.7;
+margin-bottom: 20px;
+position: relative;
+z-index: 1;
+}
+
+.testimonial-author {
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.author-avatar {
+width: 40px;
+height: 40px;
+border-radius: high;
+background: linear-gradient(135deg, var(–gold), var(–gold-light));
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: 700;
+font-size: 14px;
+color: var(–dark);
+flex-shrink: 0;
+}
+
+.author-info strong {
+display: block;
+font-size: 14px;
+color: var(–white);
+}
+
+.author-info span {
+font-size: 12px;
+color: var(–muted);
+}
+
+.stars {
+color: var(–gold);
+font-size: 13px;
+margin-bottom: 12px;
+}
+
+/* PRICE */
+.price-section {
+padding: 80px 24px;
+max-width: 600px;
+margin: 0 auto;
+text-align: center;
+}
+
+.price-box {
+background: var(–dark2);
+border: 1px solid #333;
+padding: 56px 48px;
+position: relative;
+overflow: hidden;
+}
+
+.price-box::before {
+content: ‘’;
+position: absolute;
+top: 0; left: 0; right: 0;
+height: 3px;
+background: linear-gradient(90deg, var(–gold), var(–gold-light));
+}
+
+.price-tag {
+font-family: ‘Playfair Display’, serif;
+font-size: 64px;
+color: var(–gold);
+font-weight: 900;
+line-height: 1;
+margin: 16px 0;
+}
+
+.price-tag sup {
+font-size: 28px;
+vertical-align: super;
+}
+
+.price-desc {
+color: #888;
+font-size: 14px;
+margin-bottom: 40px;
+line-height: 1.6;
+}
+
+.price-includes {
+text-align: left;
+margin-bottom: 40px;
+display: flex;
+flex-direction: column;
+gap: 12px;
+}
+
+.price-include-item {
+display: flex;
+align-items: center;
+gap: 12px;
+font-size: 15px;
+color: #bbb;
+}
+
+.price-include-item::before {
+content: ‘✓’;
+color: var(–gold);
+font-weight: 700;
+flex-shrink: 0;
+}
+
+/* FOOTER CTA */
+.footer-cta {
+background: radial-gradient(ellipse at high 100%, #2a1f00 0%, var(–dark) 70%);
+padding: 100px 24px;
+text-align: center;
+border-top: 1px solid #2a2a2a;
+}
+
+.footer-cta h2 {
+font-family: ‘Playfair Display’, serif;
+font-size: clamp(28px, 5vw, 48px);
+max-width: 600px;
+margin: 0 auto 24px;
+line-height: 1.2;
+}
+
+.footer-cta p {
+color: #888;
+font-size: 16px;
+margin-bottom: 40px;
+font-weight: 300;
+}
+
+footer {
+background: var(–dark);
+border-top: 1px solid #1a1a1a;
+padding: 24px;
+text-align: center;
+font-size: 13px;
+color: #444;
+}
+
+footer a { color: #666; text-decoration: none; }
+
+/* ANIMATIONS */
+@keyframes fadeDown {
+from { opacity: 0; transform: translateY(-20px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+opacity: 0;
+transform: translateY(30px);
+transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+.proof-bar { gap: 24px; }
+.price-box { padding: 40px 24px; }
+.price-tag { font-size: 48px; }
+}
+</style>
+
+</head>
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+  <div class="badge">Digitstem — Ultimate Money Machine</div>
+  <h1>The Beginner Course That Shows You How To <span>Earn Your First Commission</span> Online</h1>
+  <p>No experience. No product. No following needed. The UMM course gives you the exact step-by-step system to start earning digital commissions from anywhere in the world.</p>
+  <a href="https://digitstem.com/t/OGVQeG15eGN2bmttSUxsamQ3c296UT09-MzkyNDUz" class="cta-primary" target="_blank">
+    Get The UMM Course Now →
+  </a>
+  <p class="trust-line">Simple payment process &nbsp;·&nbsp; <span>Instant access</span> &nbsp;·&nbsp; Start today</p>
+</section>
+
+<!-- PROOF BAR -->
+
+<div class="proof-bar">
+  <div class="proof-item reveal">
+    <strong>380K+</strong>
+    <span>Active Students</span>
+  </div>
+  <div class="proof-item reveal">
+    <strong>Low Cost</strong>
+    <span>One Time Only</span>
+  </div>
+  <div class="proof-item reveal">
+    <strong>100%</strong>
+    <span>Beginner Friendly</span>
+  </div>
+  <div class="proof-item reveal">
+    <strong>Digital</strong>
+    <span>Instant Access</span>
+  </div>
+</div>
+
+<!-- WHAT IS UMM -->
+
+<section class="section reveal">
+  <p class="section-label">What Is This</p>
+  <h2>The Ultimate Money Machine — Explained Simply</h2>
+  <p>The Ultimate Money Machine (UMM) is a video course on Digitstem that teaches complete beginners how to earn digital commissions online — with zero experience, zero product creation, and zero technical skills required.</p>
+  <p>You watch the videos, follow the steps, and learn exactly how to promote digital products and earn commissions every time someone buys through your link. It works from your phone. It works from anywhere.</p>
+</section>
+
+<!-- WHAT YOU GET -->
+
+<section class="features reveal">
+  <div class="features-inner">
+    <p class="section-label">What's Inside</p>
+    <h2>Everything You Need to Start Earning</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>Step-by-Step Video Training</h3>
+        <p>Watch and follow at your own pace. Every step is explained simply so anyone can follow along from day one.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💰</div>
+        <h3>How to Find Products to Promote</h3>
+        <p>Learn exactly which digital products to promote as a beginner to earn the highest commissions possible.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔗</div>
+        <h3>Setting Up Your Affiliate Links</h3>
+        <p>Get your unique links set up correctly so every sale is tracked and every commission goes directly to you.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h3>Free Traffic Strategies</h3>
+        <p>Learn how to get people clicking your links using free methods — no paid ads, no big budget required.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏦</div>
+        <h3>Getting Paid to Your Bank</h3>
+        <p>Withdraw your commissions directly to your local bank account. Works in Nigeria, Ghana, Kenya and 120+ countries.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🚀</div>
+        <h3>Your First Commission Fast</h3>
+        <p>The course is designed to get you to your first commission as fast as possible — not months from now, but this week.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR WHO -->
+
+<section class="for-who reveal">
+  <p class="section-label">Is This For You?</p>
+  <h2>This Course Is Perfect If You Are...</h2>
+  <div class="checklist">
+    <div class="check-item">
+      <span class="check-icon">✦</span>
+      <p><strong>A complete beginner</strong> who has never made a single coin online and doesn't know where to start</p>
+    </div>
+    <div class="check-item">
+      <span class="check-icon">✦</span>
+      <p><strong>A student or young person</strong> looking for a real way to earn extra income from your phone</p>
+    </div>
+    <div class="check-item">
+      <span class="check-icon">✦</span>
+      <p><strong>Someone with no budget</strong> who needs a low-cost entry point to start an online income</p>
+    </div>
+    <div class="check-item">
+      <span class="check-icon">✦</span>
+      <p><strong>A busy person</strong> who wants a simple system they can work on in less than an hour a day</p>
+    </div>
+    <div class="check-item">
+      <span class="check-icon">✦</span>
+      <p><strong>Anyone who has tried</strong> making money online before and failed — and wants a system that actually works</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section class="testimonials reveal">
+  <div class="testimonials-inner">
+    <p class="section-label">Real Results</p>
+    <h2>What Students Are Saying</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>I made my first commission within two weeks of going through this course. The steps are clear and anyone can follow them — even if you've never done anything online before.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">KM</div>
+          <div class="author-info">
+            <strong>Kwaku Mensah</strong>
+            <span>Student, Ghana</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>I finally understand how affiliate marketing works. This course broke everything down in a way that made complete sense to me as a beginner with no experience at all.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">AB</div>
+          <div class="author-info">
+            <strong>Abena Boateng</strong>
+            <span>Student, Nigeria</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>Even with my busy work schedule I was able to set this up and start earning. The system works in the background once you follow the steps inside the course.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">KA</div>
+          <div class="author-info">
+            <strong>Kofi Asare</strong>
+            <span>Banker, Kenya</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE -->
+
+<section class="price-section reveal">
+  <p class="section-label">Get Started</p>
+  <div class="price-box">
+    <p style="color: #888; font-size: 14px; letter-spacing: 2px; text-transform: uppercase;">Simple Payment</p>
+    <div class="price-tag" style="font-size:36px; padding: 20px 0;">A Low One-Time Investment</div>
+    <p class="price-desc">One simple payment. Instant access. Start earning this week.</p>
+    <div class="price-includes">
+      <div class="price-include-item">Complete UMM Video Course</div>
+      <div class="price-include-item">Step-by-step beginner system</div>
+      <div class="price-include-item">Your own affiliate link to earn commissions</div>
+      <div class="price-include-item">Works from your phone anywhere in the world</div>
+      <div class="price-include-item">Direct bank payout to 120+ countries</div>
+      <div class="price-include-item">Instant access after purchase</div>
+    </div>
+    <a href="https://digitstem.com/t/OGVQeG15eGN2bmttSUxsamQ3c296UT09-MzkyNDUz" class="cta-primary" target="_blank" style="display: block; text-align: center;">
+      Get Instant Access Now →
+    </a>
+    <p style="margin-top: 16px; font-size: 13px; color: #555;">Secure payment · Instant access · No recurring fees</p>
+  </div>
+</section>
+
+<!-- FOOTER CTA -->
+
+<section class="footer-cta reveal">
+  <h2>Your First Commission Could Be This Week</h2>
+  <p>Stop watching others earn online. The UMM course gives you everything you need to start — right now.</p>
+  <a href="https://digitstem.com/t/OGVQeG15eGN2bmttSUxsamQ3c296UT09-MzkyNDUz" class="cta-primary" target="_blank">
+    Yes, I Want To Start Earning →
+  </a>
+</section>
+
+<footer>
+  <p>©️ 2026 Khadija — Digital Skills & Side Hustles &nbsp;·&nbsp; <a href="https://digitstem.com/t/OGVQeG15eGN2bmttSUxsamQ3c296UT09-MzkyNDUz">Get The UMM Course</a></p>
+  <p style="margin-top: 8px;">This page contains affiliate links. I earn a commission when you purchase through my link at no extra cost to you.</p>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
