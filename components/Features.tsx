@@ -45,23 +45,23 @@ const checklist = [
 
 export function Features() {
   return (
-    <div className="bg-[#0D0D0D]">
+    <div className="bg-dark">
       {/* What Is This */}
-      <section className="py-24 px-6 container mx-auto max-w-4xl text-center md:text-left">
-        <p className="text-[11px] text-gold font-semibold tracking-[0.3em] uppercase mb-4">What Is This</p>
-        <h2 className="text-3xl md:text-5xl font-serif font-black mb-8">The Ultimate Money Machine — Explained Simply</h2>
-        <div className="space-y-6 text-zinc-400 text-lg leading-relaxed font-light">
+      <section className="py-20 px-6 container mx-auto max-w-[800px]">
+        <p className="section-label">What Is This</p>
+        <h2 className="text-[28px] md:text-[44px] font-serif font-black mb-6 leading-[1.2]">The Ultimate Money Machine — Explained Simply</h2>
+        <div className="space-y-5 text-[#aaa] text-[17px] leading-[1.8] font-light">
           <p>The Ultimate Money Machine (UMM) is a video course on Digitstem that teaches complete beginners how to earn digital commissions online — with zero experience, zero product creation, and zero technical skills required.</p>
           <p>You watch the videos, follow the steps, and learn exactly how to promote digital products and earn commissions every time someone buys through your link. It works from your phone. It works from anywhere.</p>
         </div>
       </section>
 
       {/* What's Inside */}
-      <section className="bg-dark2 py-24 px-6 border-y border-[#1a1a1a]">
-        <div className="container mx-auto max-w-4xl">
-          <p className="text-[11px] text-gold font-semibold tracking-[0.3em] uppercase mb-4 text-center md:text-left">What's Inside</p>
-          <h2 className="text-3xl md:text-5xl font-serif font-black mb-12 text-center md:text-left">Everything You Need to Start Earning</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-0.5 bg-[#2a2a2a] border border-[#2a2a2a] overflow-hidden">
+      <section className="bg-dark2 py-20 px-6">
+        <div className="container mx-auto max-w-[800px]">
+          <p className="section-label">What's Inside</p>
+          <h2 className="text-[28px] md:text-[44px] font-serif font-black mb-12 leading-[1.2]">Everything You Need to Start Earning</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2px] bg-[#2a2a2a] border border-[#2a2a2a] overflow-hidden mt-12">
             {features.map((feature, i) => (
               <motion.div 
                 key={i}
@@ -69,11 +69,11 @@ export function Features() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-dark3 p-8 group hover:bg-[#242424] transition-colors"
+                className="bg-dark3 p-8 md:px-8 md:py-9 hover:bg-[#242424] transition-colors h-full"
               >
-                <div className="text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
-                <h3 className="text-xl font-serif font-bold mb-3">{feature.title}</h3>
-                <p className="text-zinc-500 text-sm leading-relaxed font-light">{feature.description}</p>
+                <div className="text-[28px] mb-4">{feature.icon}</div>
+                <h3 className="text-[20px] font-serif font-bold mb-[10px] text-white">{feature.title}</h3>
+                <p className="text-[#888] text-[14px] leading-[1.7]">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -81,10 +81,10 @@ export function Features() {
       </section>
 
       {/* Is This For You */}
-      <section className="py-24 px-6 container mx-auto max-w-4xl">
-        <p className="text-[11px] text-gold font-semibold tracking-[0.3em] uppercase mb-4 text-center md:text-left">Is This For You?</p>
-        <h2 className="text-3xl md:text-5xl font-serif font-black mb-12 text-center md:text-left">This Course Is Perfect If You Are...</h2>
-        <div className="space-y-4">
+      <section className="py-20 px-6 container mx-auto max-w-[800px]">
+        <p className="section-label">Is This For You?</p>
+        <h2 className="text-[28px] md:text-[44px] font-serif font-black mb-12 leading-[1.2]">This Course Is Perfect If You Are...</h2>
+        <div className="space-y-4 mt-9">
           {checklist.map((item, i) => (
             <motion.div 
               key={i}
@@ -92,10 +92,10 @@ export function Features() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="flex items-start gap-4 p-5 bg-dark2 border border-[#252525] border-l-4 border-l-gold"
+              className="flex items-start gap-4 p-5 md:px-6 md:py-5 bg-dark2 border border-[#252525] border-l-[3px] border-l-gold"
             >
-              <span className="text-gold text-lg mt-0.5 shrink-0">✦</span>
-              <p className="text-zinc-400 font-light leading-relaxed">
+              <span className="text-gold text-[18px] mt-0.5 shrink-0">✦</span>
+              <p className="text-[#bbb] text-[15px] leading-[1.6]">
                 {item.split(" ").map((word, index) => index < 2 ? <strong key={index} className="text-white font-bold">{word} </strong> : word + " ")}
               </p>
             </motion.div>
@@ -105,3 +105,4 @@ export function Features() {
     </div>
   );
 }
+

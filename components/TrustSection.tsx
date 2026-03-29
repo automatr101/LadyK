@@ -11,8 +11,8 @@ const stats = [
 
 export function TrustSection() {
   return (
-    <div className="bg-dark2 border-y border-[#2a2a2a] py-12 px-6">
-      <div className="container mx-auto flex flex-wrap justify-center gap-12 md:gap-24">
+    <div className="bg-dark2 border-y border-[#2a2a2a] py-6 px-6">
+      <div className="container mx-auto flex flex-wrap justify-center gap-12 md:gap-[48px]">
         {stats.map((stat, idx) => (
           <motion.div 
             key={idx}
@@ -22,10 +22,10 @@ export function TrustSection() {
             transition={{ delay: idx * 0.1 }}
             className="text-center"
           >
-            <strong className="block font-serif text-3xl md:text-4xl text-gold mb-1 font-black">
+            <strong className="block font-serif text-[28px] text-gold mb-0 font-black leading-tight">
               {stat.value}
             </strong>
-            <span className="text-[11px] text-zinc-500 uppercase tracking-[0.2em] font-medium">
+            <span className="text-[12px] text-muted uppercase tracking-[1px] font-medium leading-none">
               {stat.label}
             </span>
           </motion.div>
@@ -34,3 +34,4 @@ export function TrustSection() {
     </div>
   );
 }
+

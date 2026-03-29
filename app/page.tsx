@@ -8,14 +8,7 @@ import { FinalCTA } from "@/components/FinalCTA";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-gold/30 font-sans overflow-x-hidden">
-      {/* Navigation - Minimal or None as per the look.txt */}
-      <nav className="container mx-auto px-6 py-8 flex justify-between items-center relative z-20 pointer-events-none">
-        <div className="text-[10px] font-black uppercase tracking-[0.4em] text-gold/60">
-          Digitstem — Ultimate Money Machine
-        </div>
-      </nav>
-
+    <div className="min-h-screen bg-dark text-white selection:bg-gold/30 font-sans overflow-x-hidden">
       <main>
         <Hero />
         <TrustSection />
@@ -24,14 +17,14 @@ export default function Home() {
         <FinalCTA />
       </main>
 
-      {/* Footer */}
-      <footer className="py-24 border-t border-[#1a1a1a] bg-black">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-zinc-500 text-sm font-medium mb-6">
-            © 2026 Khadija — Digital Skills {" & "} Side Hustles {" · "} 
-            <a href="https://digitstem.com/promo/?reference=Abdulai%20KhadijaTuurosungJWBD" target="_blank" className="text-gold hover:text-gold-light transition-colors">Get The UMM Course</a>
+      {/* Footer from Look.txt */}
+      <footer className="bg-dark border-t border-[#1a1a1a] py-6 px-6 text-center text-[13px] text-[#444]">
+        <div className="container mx-auto">
+          <p>
+            © 2026 Khadija — Digital Skills & Side Hustles &nbsp;·&nbsp; 
+            <a href="https://digitstem.com/promo/?reference=Abdulai%20KhadijaTuurosungJWBD" target="_blank" className="hover:text-[#666] transition-colors">Get The UMM Course</a>
           </p>
-          <p className="text-zinc-600 text-[10px] font-semibold uppercase tracking-[2px] max-w-xl mx-auto leading-relaxed opacity-70">
+          <p className="mt-2">
             This page contains affiliate links. I earn a commission when you purchase through my link at no extra cost to you.
           </p>
         </div>
@@ -39,4 +32,5 @@ export default function Home() {
     </div>
   );
 }
+
 

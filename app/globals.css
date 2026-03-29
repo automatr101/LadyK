@@ -2,45 +2,46 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-@layer theme {
-  :root {
-    --gold: #C9A84C;
-    --gold-light: #F0D080;
-    --dark: #0D0D0D;
-    --dark2: #161616;
-    --dark3: #1F1F1F;
-    --white: #FAFAFA;
-    --muted: #999;
-    
-    --background: var(--dark);
-    --foreground: var(--white);
-  }
+/* CSS custom properties from Look.txt */
+:root {
+  --gold: #C9A84C;
+  --gold-light: #F0D080;
+  --dark: #0D0D0D;
+  --dark2: #161616;
+  --dark3: #1F1F1F;
+  --white: #FAFAFA;
+  --muted: #999;
+  
+  --background: #0D0D0D;
+  --foreground: #FAFAFA;
 }
 
-
+/* Tailwind v4 design tokens */
 @theme inline {
-  --color-gold: var(--gold);
-  --color-gold-light: var(--gold-light);
-  --color-dark: var(--dark);
-  --color-dark2: var(--dark2);
-  --color-dark3: var(--dark3);
-  
+  --color-gold: #C9A84C;
+  --color-gold-light: #F0D080;
+  --color-dark: #0D0D0D;
+  --color-dark2: #161616;
+  --color-dark3: #1F1F1F;
+  --color-border: #2a2a2a;
+
   --font-sans: var(--font-dm-sans);
   --font-serif: var(--font-playfair);
-
-  /* Keep existing shadcn theme variables mapping if needed */
-  --color-border: #2a2a2a;
 }
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
   body {
-    @apply bg-background text-foreground font-sans;
-  }
-  h1, h2, h3, h4, .font-serif {
-    @apply font-serif;
+    background: var(--dark);
+    color: var(--white);
+    font-family: var(--font-dm-sans), sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
@@ -52,15 +53,56 @@
     background: radial-gradient(ellipse at 50% 100%, #2a1f00 0%, var(--dark) 70%);
   }
   .text-gold-gradient {
-    @apply bg-clip-text text-transparent bg-linear-to-br from-[#C9A84C] to-[#F0D080];
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
+  
+  /* Animation classes from Look.txt */
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
   .reveal {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.7s ease, transform 0.7s ease;
   }
+  
   .reveal.visible {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Modular section styles from Look.txt */
+.section-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.price-box::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+}
+
+.testimonial-card::before {
+  content: '"';
+  font-family: var(--font-playfair), serif;
+  font-size: 80px;
+  color: var(--gold);
+  opacity: 0.2;
+  position: absolute;
+  top: 8px;
+  left: 20px;
+  line-height: 1;
 }

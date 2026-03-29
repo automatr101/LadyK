@@ -25,34 +25,33 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="bg-dark2 py-24 px-6 border-t border-[#1a1a1a]">
-      <div className="container mx-auto max-w-4xl">
-        <p className="text-[11px] text-gold font-semibold tracking-[0.3em] uppercase mb-4 text-center">Real Results</p>
-        <h2 className="text-3xl md:text-5xl font-serif font-black mb-16 text-center">What Students Are Saying</h2>
+    <section className="bg-dark2 py-20 px-6 border-t border-[#2a2a2a]">
+      <div className="container mx-auto max-w-[800px]">
+        <p className="section-label">Real Results</p>
+        <h2 className="text-[28px] md:text-[44px] font-serif font-black mb-12">What Students Are Saying</h2>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
           {testimonials.map((item, i) => (
             <motion.div 
               key={i}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-dark3 border border-[#2a2a2a] p-8 relative rounded-sm"
+              className="testimonial-card bg-dark3 border border-[#2a2a2a] p-8 relative"
             >
-              <div className="text-gold text-4xl font-serif opacity-30 absolute top-4 left-6 leading-none">"</div>
-              <div className="text-gold text-xs tracking-tighter mb-4">★★★★★</div>
-              <p className="text-zinc-400 text-sm leading-relaxed mb-8 relative z-10 font-light">
+              <div className="text-gold text-[13px] mb-3">★★★★★</div>
+              <p className="text-[#bbb] text-[15px] leading-[1.7] mb-5 relative z-10 font-light">
                 {item.content}
               </p>
               
-              <div className="flex items-center gap-4 border-t border-zinc-500/10 pt-6">
-                <div className="w-10 h-10 rounded-full bg-linear-to-br from-gold to-gold-light flex items-center justify-center font-bold text-dark text-xs">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-linear-to-br from-gold to-gold-light flex items-center justify-center font-bold text-dark text-[14px] shrink-0">
                   {item.initials}
                 </div>
-                <div>
-                  <strong className="block text-white text-sm font-bold">{item.author}</strong>
-                  <span className="text-[10px] text-zinc-500 uppercase tracking-widest">{item.role}</span>
+                <div className="author-info">
+                  <strong className="block text-white text-[14px] font-bold">{item.author}</strong>
+                  <span className="text-[12px] text-muted">{item.role}</span>
                 </div>
               </div>
             </motion.div>
@@ -62,3 +61,4 @@ export function Testimonials() {
     </section>
   );
 }
+
