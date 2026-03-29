@@ -43,13 +43,12 @@ export function Hero() {
            animate={{ opacity: 1, y: 0 }}
            transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <a 
-            href="https://digitstem.com/promo/?reference=Abdulai%20KhadijaTuurosungJWBD" 
-            target="_blank"
-            className="inline-block bg-linear-to-br from-gold to-gold-light text-dark font-bold text-[17px] px-12 py-5 rounded-sm shadow-[0_8px_40px_rgba(201,168,76,0.35)] hover:transform hover:-translate-y-1 transition-all duration-300 uppercase tracking-widest relative overflow-hidden"
+          <button 
+            onClick={() => window.dispatchEvent(new CustomEvent("open-lead-form"))}
+            className="inline-block bg-linear-to-br from-gold to-gold-light text-dark font-bold text-[17px] px-12 py-5 rounded-sm shadow-[0_8px_40px_rgba(201,168,76,0.35)] hover:transform hover:-translate-y-1 transition-all duration-300 uppercase tracking-widest relative overflow-hidden cursor-pointer"
           >
             Get The UMM Course Now →
-          </a>
+          </button>
           <p className="mt-6 text-[13px] text-zinc-500 font-normal">
             One-time payment  &nbsp;·&nbsp; <span className="text-gold">Instant access</span> &nbsp;·&nbsp; Start today
           </p>

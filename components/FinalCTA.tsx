@@ -35,13 +35,12 @@ export function FinalCTA() {
             ))}
           </div>
           
-          <a 
-            href="https://digitstem.com/promo/?reference=Abdulai%20KhadijaTuurosungJWBD" 
-            target="_blank"
-            className="block w-full bg-linear-to-br from-gold to-gold-light text-dark font-bold py-5 rounded-sm text-[17px] shadow-[0_8px_40px_rgba(201,168,76,0.3)] hover:transform hover:-translate-y-1 transition-all duration-300 uppercase tracking-widest"
+          <button 
+            onClick={() => window.dispatchEvent(new CustomEvent("open-lead-form"))}
+            className="block w-full bg-linear-to-br from-gold to-gold-light text-dark font-bold py-5 rounded-sm text-[17px] shadow-[0_8px_40px_rgba(201,168,76,0.3)] hover:transform hover:-translate-y-1 transition-all duration-300 uppercase tracking-widest cursor-pointer"
           >
             Get Instant Access Now →
-          </a>
+          </button>
           <p className="mt-4 text-[13px] text-[#555] font-medium">Secure payment · Instant access · No recurring fees</p>
         </div>
       </section>
@@ -53,13 +52,12 @@ export function FinalCTA() {
           <p className="text-[#888] text-[16px] mb-10 font-light max-w-lg mx-auto">
             Stop watching others earn online. The UMM course gives you everything you need to start — right now.
           </p>
-          <a 
-            href="https://digitstem.com/promo/?reference=Abdulai%20KhadijaTuurosungJWBD" 
-            target="_blank"
-            className="inline-block bg-linear-to-br from-gold to-gold-light text-dark font-bold px-12 py-5 rounded-sm text-[17px] shadow-[0_8px_40px_rgba(201,168,76,0.3)] hover:transform hover:-translate-y-1 transition-all duration-300 uppercase tracking-widest"
+          <button 
+            onClick={() => window.dispatchEvent(new CustomEvent("open-lead-form"))}
+            className="inline-block bg-linear-to-br from-gold to-gold-light text-dark font-bold px-12 py-5 rounded-sm text-[17px] shadow-[0_8px_40px_rgba(201,168,76,0.3)] hover:transform hover:-translate-y-1 transition-all duration-300 uppercase tracking-widest cursor-pointer"
           >
             Yes, I Want To Start Earning →
-          </a>
+          </button>
         </div>
       </section>
     </div>
